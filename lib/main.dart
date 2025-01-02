@@ -511,13 +511,9 @@ class _CVFormState extends State<CVForm> {
               // Submit Button
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState?.validate() ?? false) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Form Submitted')),
-                    );
-                  }
-                },
-                child: Text('Submit'),
+                  Navigator.pushNamed(context, '/sharedPreferences');
+                  },
+                  child: Text('Go to Shared Preferences List'),
               ),
             ],
           ),
